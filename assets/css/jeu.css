@@ -1,0 +1,431 @@
+main {
+    margin-left: 15%;
+    margin-right: 15%;
+    /* min-height: calc(100vh - 4vh - 12vh) */
+  }
+
+/********************** Bloc descriptif du jeu ****************/
+
+.bodycontain {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80vh;
+    margin: auto;
+    background-color: #4b4b4b;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px black;
+    padding: 1%;
+    margin-bottom: 1%;
+  }
+  
+  .title {
+    text-align: center;
+    width: 100%;
+    height: 8vh;
+    margin: 0;
+    align-content: center;
+    display: flex;
+  }
+  .title h2 {
+    margin : auto;
+    text-shadow: 3px 3px 3px #343434;
+    /* width: 90%; */
+  }
+  
+  .title img {
+    align-self: center;
+    justify-self:  flex-end;
+    height: 35%;
+  }
+  .favno {
+    content: url("./coeur\ vide.png");
+  }
+  .favyes {
+    content: url("./coeur\ plein.png");
+  }
+
+  .gameimg{
+    width: 40%;
+    height: 40%;
+   }
+  .gameimg img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+  .bodydescr {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: #4b4b4b; */
+    width: 60%;
+    height: 40%;
+    /* border-radius: 0 15px 15px 0; */
+    /* align-content: center; */
+  }
+  
+  .resume {
+    height: 100%;
+    width: 100%;
+  }
+   
+  .bodydescr p{
+    text-align: justify;
+    padding-left: 1%;
+    height: 100%;
+    overflow: auto;
+    margin: 0;
+  }
+  /* .star {
+    width: 100%;
+    height: 10%;
+    justify-content: flex-start;
+  } */
+
+  .info {
+    padding: 1%;
+    height: 45%;
+    width: 45%;
+    overflow: auto;
+    font-style: italic;
+    /* font-size: 15px; */
+  }
+  .info ul {
+    margin: auto;
+    padding-left: 0;
+  }
+  
+  .info li {
+    list-style: none;
+    margin: auto;
+  }
+
+/***************** carousel ****************/
+
+.diapo {
+  width: 55%;
+  height: 45%;
+  /* justify-content: center; */
+  /* margin: auto; */
+  position: relative;
+}
+.diapo button {
+  position: absolute; /***** permet la superposition sur l'élément relative ********/
+  background: none;
+  border: none;    /******** retire bordures ******/
+  outline: none;    /******** retirer contours *****/
+  font-size: 2.6rem;
+  color: #e5e5e5;
+  cursor: pointer;
+  transform: translateY(-50%);   /********* déplacement sur axe vertical *******/
+  top: 50%;
+  z-index: 1;
+  opacity: 0.5;
+}
+#prev {
+  left: 10px;
+}
+#next {
+  right: 10px;
+}
+.diapo ul {
+  margin: 0;
+  padding: 0;
+}
+.diapo li {
+  list-style: none;
+  padding-left: 2%;
+  padding-right: 2%;
+  /* width: 90%; */
+}
+/* .diapo img {
+    height: 100%;
+    object-fit: cover;
+
+} */
+ .slide.active {
+  opacity: 1;
+ }
+.slide {
+  position: absolute; /********** pour superposition ********/
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+ .slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+/************************ Bloc commentaires postés ************************/
+
+.comcontain {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 1%;
+  margin-bottom: 1%;
+  gap: 1%;
+  justify-content: center;
+}
+
+.comboxpost {
+  display: grid;
+  flex-wrap: wrap;
+  height: 35vh; 
+  /* width: 50%; */
+  /* width: 31vw; */
+  width: 490px;
+  box-shadow: 2px 2px 2px black;
+  background-color: #4b4b4b;
+  border-radius: 15px;
+  margin-bottom: 2%;
+  grid-template-rows: 30% 70%;
+  grid-template-columns: 20% 40% 40%;
+}
+
+.imgprofile1 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-self: center;
+  justify-self: center;
+}
+.pseudo1 {
+  align-self: center;
+}
+.ratingresult {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+.ratingresult span {
+  font-size: 1.5rem;
+}
+
+.com {
+  overflow: auto;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 2%;
+}
+.com p {
+  margin: 0;
+  font-size: 15px;
+}
+
+
+/************************ Bloc commentaire utilisateur ********************/
+h3 {
+ letter-spacing: 2px;
+ text-shadow: 3px 3px 3px black;
+}
+
+hr {
+  margin-top: -1%;
+}
+.containformcom {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  height: 50vh;
+  margin: auto;
+  background-color: #4b4b4b;
+  border-radius: 15px;
+  box-shadow: 2px 2px 2px black;
+  padding: 1%;
+  margin-bottom: 1%;
+  margin-top: 2%;
+}
+
+.commentbox {
+  display: grid;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: 20% 40% 40%;
+  grid-template-columns: repeat(4, 25%);
+}
+.imgprofile {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-self: center;
+  justify-self: center;
+}
+.commentbox .pseudo {
+  align-self: center;
+}
+
+/******************** star rating *******************/
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  /***** Nécessaire pour bien sélectionner les étoiles de gauche à droite ****/
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 4;
+  grid-column-end: 5;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  font-size: 2rem;
+  color: #343434;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.rating input:checked ~ label {         /**** le ~ sélectionne l'élément frère suivant, d'où l'intéret du row-reverse pour partir de gauche et non de droite *****/
+  color: #e5e5e5;
+}
+
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #e5e5e5;
+}
+
+/*******************/
+
+.commentbox h3 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 5;
+  align-self: center;
+  text-align: center;
+  /* font-size: large; */
+}
+
+/************** partie formulaire pour commentaire *************/
+
+.commentform{
+  display: flex;
+  padding: 6%;
+  width: 100%;
+  height: auto;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+textarea {
+  /* grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 4; */
+  width: 100%;
+  height: 100%;
+  padding: 1%;
+  border-radius: 15px;
+  resize: none;
+  color: #343434;
+}
+
+/*********************** Bouton Publier *************************/
+
+.commentbox button {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  background-color: #936FCD;
+  /* padding: 2%; */
+  height: 65px;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 15px;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px #343434;
+  align-self: center;
+}
+
+/************** Version mobile *****************/
+
+@media all and (max-width: 900px){
+  main {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .bodycontain {
+    height: 130vh;
+  }
+  .gameimg,
+  .diapo {
+    width: 100%;
+    height: 20%;
+  }
+  .bodydescr {
+    width: 100%;
+    height: 30%;
+  }
+  .info {
+    width: 100%;
+    height: 20%;
+    font-size: 15px;
+    font-style: italic;
+  }
+  .containformcom {
+    width: 100%;
+  }
+  .commentbox {
+    grid-template-rows: 20% 40% 20% 20%;
+    grid-template-columns: repeat(4, 25%);
+  }
+  .commentform {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    padding: 2%;
+  }
+  .rating {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .commentbox h3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .commentbox button {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    height: 50px;
+  }
+  .imgprofile {
+    width: 70px;
+    height: 70px;
+  }
+  hr {
+    display: none;
+  }
+ }

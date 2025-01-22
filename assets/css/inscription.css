@@ -1,0 +1,138 @@
+main {
+    /* margin-top: 5%; */
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    min-height: calc(100vh - 6vh - 12vh)
+  }
+  .containinscr {
+    align-content: center;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  } 
+
+  .inscription {
+    margin: auto;
+    /* width: 50%; */
+    width: 550px;
+    height: 75vh;
+    background-color: #4b4b4b;
+    border-radius: 15px;
+    /* text-align: center; */ /******************************/
+    box-shadow: 2px 2px 2px black;
+    /* margin-bottom: 2%; */
+    /* align-content: center; */
+}
+.titleinscription {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  /* align-items: center; */
+}
+
+.titleinscription h2 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  text-shadow: 3px 3px 3px #343434;
+  align-content: center;
+}
+.champ {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 40%;
+  width: 100%;
+  font-size: large;
+}
+
+hr {
+  width: 60%;
+  margin-top: -1%;
+}
+
+.champ label{
+  width: 45%;
+  text-align: right;
+  font-size: 16px;
+}
+.champ input {
+  width: 50%;
+  height: 5vh;
+  border-radius: 15px;
+  background: #e5e5e5;
+  color: #343434;
+  font-size: medium;
+  margin-left: 2%;
+  padding: 2%;
+}
+.radio {
+  width: 100%;
+  height: 10%;
+  align-content: center;
+  text-align: center;
+}
+
+.radio input {
+  width: 10%;
+}
+
+.formvalide {
+  width: 100%;
+  height: 20%;
+  align-content: center;
+  text-align: center;
+}
+  
+.formvalide input {
+  background-color: #936FCD;
+  padding: 2%;
+  width: 50%;
+  height: 65px;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 15px;
+  font-size: 22px;
+  text-shadow: 2px 2px 2px #343434;
+}
+
+.inscription p {
+  text-align: center;
+  font-size: larger;
+  margin: auto;
+  height: 10%;
+  align-content: center;
+  text-shadow: 3px 3px 3px #343434;
+}
+
+@media all and (max-width: 900px){
+  main {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .radio {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    height: 13%;
+    padding-left: 40%;
+    text-align: left;
+     }
+
+  .radio label {
+    height: 40%;
+    align-content: center;
+  }
+
+  .inscription p {
+    height: 7%;
+  }
+  .formvalide {
+    height: 15%;
+  }
+
+}

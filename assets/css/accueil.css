@@ -1,0 +1,276 @@
+/************************************* BODY ***********************************************/
+
+/**************** Début corps de la page d'accueil ********************/
+main {
+    margin-left: 10%;
+    margin-right: 10%;
+    /* min-height: calc(100vh - 4vh - 12vh) */
+  }
+  
+  .bodyintro{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #4b4b4b;
+    border-radius: 15px;
+    width: 100%;
+    font-size: medium;
+    text-align: justify;
+    box-shadow: 2px 2px 2px black;
+  }
+  
+  .bodyintro p{
+    padding: 2%;
+    margin: 0;
+  }
+  
+  /****************** Jeu à la une **************/
+  
+  .bodycontain {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 60vh;
+    margin: auto;
+    background-color: #4b4b4b;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px black;
+  }
+  
+  .title {
+    text-align: center;
+    width: 65%;
+    height: 8vh;
+    margin: auto;
+    background-color: #936FCD;
+    border-radius: 15px;
+    align-content: center;
+    box-shadow: 2px 2px 2px black;
+  }
+  .title h1,
+  .title h2 {
+    margin : auto;
+    text-shadow: 3px 3px 3px #343434;
+  }
+  
+  .imgmonthgame{
+    width: 40%;
+    /* height: 100%; */
+  }
+  .imgmonthgame img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 0 0 15px;
+  }
+  
+  .bodydescr {
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: #4b4b4b; */
+    width: 60%;
+    height: 100%;
+    /* border-radius: 0 15px 15px 0; */
+    align-content: center;
+  }
+  
+  .resume {
+    height: 65%;
+    width: 100%;
+  }
+  .resume h2 {
+    text-shadow: 3px 3px 3px #343434;
+  }
+  
+  .bodydescr h2 {
+    padding-top: 2%;
+    text-align: center;
+    margin: auto;
+    height: 15%;
+  }
+  
+  .bodydescr p{
+    text-align: justify;
+    padding: 1%;
+    height: 70%;
+    overflow: auto;
+  }
+  
+  .info {
+    height: 35%;
+    width: 100%;
+    overflow: auto;
+    /* font-size: 15px; */
+  }
+  .info ul {
+    margin: auto;
+    padding-left: 0;
+  }
+  
+  .info li {
+    list-style: none;
+    padding-left: 2%;
+  }
+  .title2 {
+    text-align: center;
+    width: 40%;
+    height: 7vh;
+    margin: auto;
+    background-color: #936FCD;
+    border-radius: 0 0 15px 15px;
+    align-content: center;
+    box-shadow: 2px 2px 2px black;
+  }
+  .title2 h2{
+    margin : auto;
+  }
+  .title2 h2 a {
+    text-decoration: none;
+    padding-left: 40%; 
+    padding-right: 40%;
+  }
+  .title2 h2 a:hover {
+    color: #4b4b4b;
+  }
+  
+  
+  /************** MOBILE JEU A LA UNE *********************/
+  
+  @media all and (max-width: 1000px)
+  {
+    main{
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .bodycontain{
+      height: 40rem;
+      width: 100%;
+    }
+    /* .title h1 {
+      font-size: x-large;
+    }  */
+    .imgmonthgame{
+      width: 100%;
+      height: 30%;
+    }
+    .imgmonthgame img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0px;
+    }
+    .bodydescr {
+      width: 100%;
+      height: 70%;
+      border-radius: 0 0 15px 15px;
+    }
+    .resume{
+      height: 60%;
+    }
+    .bodydescr h2{
+      height: 20%;
+    }
+    .bodydescr p{
+      height: 65%;
+      /* overflow: auto; */
+    }
+    .info{
+      height: 40%;
+      padding-bottom: 2%;
+      font-size: 15px;
+      /* overflow: auto; */
+    }
+    .title2 h2 a {
+      padding: 0;
+  }
+  }
+  
+  /******************** Jeux du moment ***********************/
+  
+  .containgame {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    /* height: 40vh; */
+    height: auto;
+    justify-content: space-between;
+    /* margin: auto; */
+  }
+  .gamebloc{
+    width: 290px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 300px;
+    background-color: #4b4b4b;
+    border-radius: 15px;
+    justify-content: center;
+    margin-bottom: 3%;
+    align-content: center; 
+    text-align: center;
+    box-shadow: 2px 2px 2px black;
+  }
+  .gamebloc img{
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+  }
+  .gamebloc a{
+    text-decoration: none;
+  }
+  .gamebloc a:hover{
+    color: #936FCD;
+  }
+  .gamebloc h3 {
+    text-align: center;
+    align-self: center;
+    /* height: 60px; */
+  } 
+  
+  /*************** Mobile jeux du moment ***************/
+  @media all and (max-width: 750px)
+  {
+    .containgame {
+    justify-content: center;
+  }
+    .gamebloc {
+      height: 180px;
+      width: 100%;
+      }
+    .gamebloc img {
+      height: 70%;
+    }
+  }
+  
+  /**************** Sorties attendues *********************/
+  
+  .gamerelease {
+    width: 60%;
+    height: 25%;
+    text-align: center;
+    align-content: center;
+    letter-spacing: 1px;
+    border-bottom: #e5e5e5 1px solid;
+  }
+  
+  .bodycontain :nth-child(7){
+    border-bottom: none;
+  }
+  
+  .imgrelease,
+  .imgrelease1,
+  .imgrelease4 {
+    width: 40%;
+    height: 25%;
+  }
+  
+  .imgrelease img,
+  .imgrelease1 img,
+  .imgrelease4 img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .imgrelease1 img {
+    border-radius: 0 15px 0 0;
+  }
+  .imgrelease4 img {
+    border-radius: 0 0 15px 0;
+  }

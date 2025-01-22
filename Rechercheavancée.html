@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamePlay</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/rechercheavancee.css">
+    <link href="https://fonts.cdnfonts.com/css/roboto-3" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <label class="toggle" for="toggle">☰</label>
+            <input type="checkbox" id="toggle">
+            <div class="navcontain">
+                <div class="home">
+                    <a href="./index.html"><img src="./assets/Images/Sans titre 2.png" width="90%" alt="accueil" />
+                        <span>Accueil</span> </a>
+                </div>
+
+                <form class="plateforme" name="plateforme">
+                    <select name="plateformelist" onChange="change()" size="1">
+                        <option value="" disabled selected>Plateforme</option>
+                        <option value="./pc.html">PC</option>
+                        <option value="./ps5.html">PS5/PS4</option>
+                        <option value="./xbox.html">XBOX</option>
+                        <option value="./switch.html">SWITCH</option>
+                    </select>
+                </form>
+
+                <form class="genre" name="genre">
+                    <select name="genrelist" onChange="change1()" size="1">
+                        <option value="" disabled selected>Genre</option>
+                        <option value="./fps.html">FPS</option>
+                        <option value="./rpg.html">RPG</option>
+                        <option value="./aventure.html">Aventure</option>
+                        <option value="./horreur.html">Horreur</option>
+                    </select>
+                </form>
+
+                <div class="search">
+                    <form class="research" action="">
+                        <input class="search-input" type="search" id="'recherche" name="q"
+                            placeholder="Nom du jeu..." />
+                        <button class="researchbtn"><img src="./assets/Images/icons8-loupe-32.png" alt=""
+                                width="25px"></button>
+                    </form>
+                </div>
+
+                <div class="filter">
+                    <a href="./Rechercheavancée.html"><span>Recherche avancée</span></a>
+                </div>
+
+                <div class="login">
+                    <img src="./assets/Images/icons8-male-user-32.png" alt="" width="25px" /><a href="./connexion.html">
+                        Inscription/Connexion</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <br>
+        <div class="containresearch">
+            <div class="advsearch">
+                <div class="titleadv">
+                    <h2>Recherche avancée</h2>
+                </div>
+
+                <div class="selectcontain">
+                    <form class="platformsearch" name="gameplatform">
+                        <select name="platformlist">
+                            <option value="" disabled selected>Plateforme</option>
+                            <option value="pc">PC</option>
+                            <option value="ps">PS5/PS4</option>
+                            <option value="xbox">XBOX</option>
+                            <option value="switch">SWITCH</option>
+                        </select>
+                    </form>
+
+                    <form class="gendersearch" name="gamegender">
+                        <select name="genderlist">
+                            <option value="" disabled selected>Genre</option>
+                            <option value="FPS">FPS</option>
+                            <option value="RPG">RPG</option>
+                            <option value="MMORPG">MMORPG</option>
+                            <option value="./horreur.html">Horreur</option>
+                        </select>
+                    </form>
+
+                    <form class="price" name="price">
+                        <select name="pricelist">
+                            <option value="" disabled selected>Prix</option>
+                            <option value="moinsdix">Moins de 10 euros</option>
+                            <option value="dixtrente">Entre 10 et 30 euros</option>
+                            <option value="trentecinquante">Entre 30 et 50 euros</option>
+                            <option value="cinquanteplus">Plus de 50 euros</option>
+                        </select>
+                    </form>
+
+                </div>
+                <div class="searchsubmit">
+                    <input type="submit" value="Rechercher">
+                </div>
+            </div>
+        </div>
+
+        <div class="result">
+            <h3>Résultats :</h3>
+
+        </div>
+    </main>
+
+    <footer>
+        <a href="">Nous contacter</a>
+        <a href="">FAQ</a>
+        <a href="">Informations légales</a>
+        <a href="">Politique de confidentialité</a>
+        <a href="">CGU</a>
+        <a href="">Cookies</a>
+        <div class="copyright">
+            <p>Copyright © 2024 Gameplay - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/menuderoulant.js"></script>
+</body>
+
+</html>

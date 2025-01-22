@@ -1,0 +1,167 @@
+main {
+    /* margin-top: 5%; */
+    margin-left: 10%;
+    margin-right: 10%;
+    min-height: calc(100vh - 6vh - 12vh)
+  }
+  @media all and (max-width: 900px){
+    main {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+}
+
+/**************** Connexion ******************/
+
+.formcontain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: center; */
+    justify-content: space-around;
+    margin-bottom: 2%;
+} 
+
+.formconnexion {
+    margin: auto;
+    /* width: 50%; */
+    width: 550px;
+    height: 58vh;
+     background-color: #4b4b4b;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 2px black;
+    margin-bottom: 2%;
+    /* align-content: center; */
+}
+.forminput {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 25%;
+    width: 100%;
+    font-size: large;
+}
+
+.formconnexion h2 {
+    width: 100%;
+    height: 10%;
+    text-shadow: 3px 3px 3px #343434;
+}
+
+hr {
+    width: 60%;
+    margin-top: -2%;
+}
+
+.forminput label{
+    width: 100%;
+}
+.forminput a {
+    font-size: 14px;
+}
+
+.forminput input {
+    width: 80%;
+    height: 6vh;
+    border-radius: 15px;
+    background: #e5e5e5;
+    color: #4b4b4b;
+    font-size: medium;
+    padding: 2%;
+}
+
+.formvalide {
+    width: 100%;
+    height: 25%;
+    align-content: center;
+}
+
+.formvalide input {
+    background-color: #936FCD;
+    padding: 2%;
+    width: 60%;
+    height: 65px;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 15px;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px #343434;
+    }
+
+
+/*************************Inscription ***************************/
+
+.formregistration {
+    /* margin: auto; */
+    /* width: 45%; */
+    width: 550px;
+    height: 40vh;
+    background-color: #4b4b4b;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 2px black;
+    margin-bottom: 2%;
+    /* align-content: center; */
+}
+.create {
+    width: 100%;
+    height: 65%;
+    /* align-items: space-around;  */
+    align-content: center; 
+}
+
+.formregistration h2 {
+    width: 100%;
+    height: 15%;
+    /* margin: auto; */
+    align-content: center;
+    text-shadow: 3px 3px 3px #343434;
+}
+
+.create p {
+margin: auto;
+height: 40%;
+    }
+
+.createbtn {
+    text-align: center;
+    width: 65%;
+    height: 65px;
+    margin: auto;
+    background-color: #936FCD;
+    border-radius: 15px;
+    /* align-content: center; */
+    box-shadow: 2px 2px 2px black;
+}
+.createbtn h2{
+    margin : auto;
+    height: 100%;
+    font-size: 20px;
+} 
+.createbtn a {
+    text-decoration: none;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    /* padding: 5% 29% 5% 29%; */
+    /* padding: 24px 102px 24px 102px; */
+
+}
+/* .createbtn h2 a:hover {
+    color: #4b4b4b;
+}  */
+/* .create input {
+    background-color: #936FCD;
+    padding: 2%;
+    width: 60%;
+    height: 65px;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 15px;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px #343434;
+} */
