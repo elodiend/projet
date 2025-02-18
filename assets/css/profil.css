@@ -1,0 +1,206 @@
+main {
+    /* margin-top: 5%; */
+    margin-left: 10%;
+    margin-right: 10%;
+    /* min-height: calc(100vh - 6vh - 12vh) */
+  }
+  @media all and (max-width: 900px){
+    main {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+}
+
+/* Titre section et bouton déco */
+
+.categorycontain {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: auto;
+    width: 100%;
+    height: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    /* margin: auto; */
+  }
+  
+  .title1 {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    text-align: center;
+    width: 100%;
+    height: 8vh;
+    /* margin: auto; */
+    background-color: #936FCD;
+    border-radius: 15px;
+    align-content: center;
+    box-shadow: 2px 2px 2px black;
+    }
+    
+  .title1 h3 {
+    margin : auto;
+    text-shadow: 3px 3px 3px #343434;
+  }
+  
+  .deconnexion {
+    display: flex;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px #343434;
+    justify-content: center;
+    height: 8vh;
+    background-color: #936FCD;
+    border-radius: 15px;
+    align-content: center;
+    box-shadow: 2px 2px 2px black;
+    cursor: pointer;
+   } 
+
+
+/**************** Bloc pseudo/infos ******************/
+
+.profilecontain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* align-content: center; */
+    justify-content: space-around;
+} 
+
+.profile {
+    margin: auto;
+    flex-wrap: wrap;
+    display: flex;
+    /* width: 50%; */
+    width: 90%;
+    height: 70vh;
+     background-color: #4b4b4b;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 2px black;
+    margin-bottom: 2%;
+    /* align-content: center; */
+}
+
+.pseudo {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+
+.pseudo img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    padding: 2%;
+}
+
+.pseudo h2 {    
+    width: 70%;
+    /* height: 7%; */
+    text-shadow: 3px 3px 3px #343434;}
+
+.leftpart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    }
+
+.infoprofile {
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+}
+
+.infoprofile h2,
+.rightpart h2 {
+    width: 100%;
+    height: 15%;
+    text-shadow: 3px 3px 3px #343434;
+    align-content: center;
+    margin: 0;
+}
+
+hr {
+    width: 60%;
+    /* margin-top: -15%; */
+}
+.leftpart ul {
+    /* margin: auto; */
+    padding: 4%;
+    width: 100%;
+    height: 50%;
+}
+
+.leftpart li,
+.rightpart li {
+    list-style: none;
+    text-align: left;
+    width: 95%;
+    line-height: 1.7rem;
+}
+
+/************* côté jeux favoris ******/
+
+.rightpart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 50%;
+}
+
+.rightpart ul {
+    margin: 0;
+    padding: 4%;
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+}
+
+/******* bouton modifier profil *****/
+
+.createbtn {
+    text-align: center;
+    width: 35%;
+    height: 60px;
+    margin: auto;
+    background-color: #936FCD;
+    border-radius: 15px;
+    align-content: center;
+    box-shadow: 2px 2px 2px black;
+    /* margin-bottom: 2%; */
+}
+.createbtn h2{
+    /* margin : auto; */
+    height: 100%;
+    font-size: 20px;
+    text-shadow: 3px 3px 3px #343434;
+} 
+.createbtn a {
+    text-decoration: none;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    /* padding: 5% 29% 5% 29%;
+    padding: 24px 102px 24px 102px; */
+
+}
+
+
+

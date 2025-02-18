@@ -80,7 +80,7 @@ hr {
     align-content: center;
 }
 
-.formvalide input {
+.formvalide input { 
     background-color: #936FCD;
     padding: 2%;
     width: 60%;
@@ -90,6 +90,7 @@ hr {
     border-radius: 15px;
     font-size: 20px;
     text-shadow: 2px 2px 2px #343434;
+    cursor: pointer;
     }
 
 

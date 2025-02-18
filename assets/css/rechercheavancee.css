@@ -95,6 +95,7 @@ main {
   font-size: 20px;
   letter-spacing: 1px;
   text-shadow: 2px 2px 2px #343434;
+  cursor: pointer;
 }
 
 /***************************/
