@@ -5,69 +5,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gameplay</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/jeu.css">
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/jeu.css">
     <link href="https://fonts.cdnfonts.com/css/roboto-3" rel="stylesheet" />
 </head>
 
 <body>
     <header>
-        <nav>
-            <label class="toggle" for="toggle">☰</label>
-            <input type="checkbox" id="toggle">
-            <div class="navcontain">
-                <div class="home">
-                    <a href="./index.html"><img src="./assets/Images/Sans titre 2.png" width="90%" alt="accueil" />
-                        <span>Accueil</span> </a>
-                </div>
-
-                <form class="plateforme" name="plateforme">
-                    <select name="plateformelist" onChange="change()" size="1">
-                        <option value="" disabled selected>Plateforme</option>
-                        <option value="./pc.html">PC</option>
-                        <option value="./ps5.html">PS5/PS4</option>
-                        <option value="./xbox.html">XBOX</option>
-                        <option value="./switch.html">SWITCH</option>
-                    </select>
-                </form>
-
-                <form class="genre" name="genre">
-                    <select name="genrelist" onChange="change1()" size="1">
-                        <option value="" disabled selected>Genre</option>
-                        <option value="./fps.html">FPS</option>
-                        <option value="./rpg.html">RPG</option>
-                        <option value="./aventure.html">Aventure</option>
-                        <option value="./horreur.html">Horreur</option>
-                    </select>
-                </form>
-
-                <div class="search">
-                    <form class="research" action="">
-                        <input class="search-input" type="search" id="'recherche" name="q"
-                            placeholder="Nom du jeu..." />
-                        <button class="researchbtn"><img src="./assets/Images/icons8-loupe-32.png" alt=""
-                                width="25px"></button>
-                    </form>
-                </div>
-
-                <div class="filter">
-                    <a href="./Rechercheavancée.html"><span>Recherche avancée</span></a>
-                </div>
-
-                <div class="login">
-                    <img src="./assets/Images/icons8-male-user-32.png" alt="" width="25px" /><a href="./connexion.html">
-                        Inscription/connexion</a>
-                </div>
-            </div>
-        </nav>
+    <?php include("../template/navbar.php"); ?>
     </header>
     <br>
     <main>
         <div class="bodycontain">
             <div class="title">
-                <h2>Ghost of Tsushima</h2> <img class="favno" src="./assets/Images/coeur vide.png" id="heart" alt="fav">
+                <h2>Ghost of Tsushima</h2> <img class="favno" src="../assets/Images/coeur vide.png" id="heart"
+                    alt="fav">
             </div>
-            <div class="gameimg"><img src="./assets/Images/ezgif-1-00fd30be8e.jpg" alt="" width="100%"></div>
+            <div class="gameimg"><img src="../assets/Images/ezgif-1-00fd30be8e.jpg" alt="" width="100%"></div>
             <div class="bodydescr">
                 <div class="resume">
                     <p>Empruntez une nouvelle voie et entrez en guerre pour libérer Tsushima. Défiez vos adversaires au
@@ -100,11 +54,11 @@
                 <button class="btn" id="prev">&#10096;</button>
                 <button class="btn" id="next">&#10097;</button>
                 <ul>
-                    <li class="slide"><img src="./assets/Images/got1.jpg" width="100%" alt="">
+                    <li class="slide"><img src="../assets/Images/got1.jpg" width="100%" alt="">
                     </li>
-                    <li class="slide active"><img src="./assets/Images/got2.jpg" width="100%" alt="">
+                    <li class="slide active"><img src="../assets/Images/got2.jpg" width="100%" alt="">
                     </li>
-                    <li class="slide"><img src="./assets/Images/got3.jpg" width="100%" alt="">
+                    <li class="slide"><img src="../assets/Images/got3.jpg" width="100%" alt="">
                     </li>
                 </ul>
 
@@ -116,7 +70,7 @@
 
         <div class="comcontain">
             <div class="comboxpost">
-                <img src="./assets/Images/account_circle_50dp_E5E5E5_FILL0_wght400_GRAD0_opsz48.png" alt="image profil"
+                <img src="../assets/Images/account_circle_50dp_E5E5E5_FILL0_wght400_GRAD0_opsz48.png" alt="image profil"
                     class="imgprofile1"><span class="pseudo1">Pseudo</span>
 
                 <div class="ratingresult">
@@ -133,7 +87,7 @@
             </div>
 
             <div class="comboxpost">
-                <img src="./assets/Images/account_circle_50dp_E5E5E5_FILL0_wght400_GRAD0_opsz48.png" alt="image profil"
+                <img src="../assets/Images/account_circle_50dp_E5E5E5_FILL0_wght400_GRAD0_opsz48.png" alt="image profil"
                     class="imgprofile1"><span class="pseudo1">Pseudo</span>
 
                 <div class="ratingresult">
@@ -154,7 +108,7 @@
         <hr align="left" width="35%">
         <div class="containformcom">
             <div class="commentbox">
-                <img src="./assets/Images/account_circle_50dp_E5E5E5_FILL0_wght400_GRAD0_opsz48.png" alt="image profil"
+                <img src="../assets/Images/account_circle_50dp_E5E5E5_FILL0_wght400_GRAD0_opsz48.png" alt="image profil"
                     class="imgprofile"><span class="pseudo">Pseudo</span>
 
                 <div class="rating">
@@ -180,21 +134,11 @@
 
         </div>
     </main>
-    <footer>
-        <a href="">Nous contacter</a>
-        <a href="">FAQ</a>
-        <a href="">Informations légales</a>
-        <a href="">Politique de confidentialité</a>
-        <a href="">CGU</a>
-        <a href="">Cookies</a>
-        <div class="copyright">
-            <p>Copyright © 2024 Gameplay - Tous droits réservés</p>
-        </div>
-    </footer>
+    <?php include("../template/footer.php"); ?>
 
-    <script src="./assets/js/menuderoulant.js"></script>
-    <script src="./assets/js/favori.js"></script>
-    <script src="./assets/js/diapo.js"></script>
+    <script src="../assets/js/menuderoulant.js"></script>
+    <script src="../assets/js/favori.js"></script>
+    <script src="../assets/js/diapo.js"></script>
 
 </body>
 

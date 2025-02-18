@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gameplay</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/genre.css">
+    <link href="https://fonts.cdnfonts.com/css/roboto-3" rel="stylesheet" />
+</head>
+
+<body>
+    <header>
+    <?php include("../template/navbar.php"); ?>
+    </header>
+    <main>
+        <br>
+        <div class="categorycontain">
+            <div class="title1">
+                <h3>Horreur</h3>
+            </div>
+            <div class="title2">
+                <select name="order" id="order">
+                    <option value="" disabled selected>Trier</option>
+                    <option value="asc">de A à Z</option>
+                    <option value="desc">de Z à A</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="containcatgame" id="containcatgame">
+            <div class="gamebloc"><img
+                    src="../assets/Images/stalker-2-un-miracle-dans-un-ecrin-anachronique-d1ff115b__w854.jpg"
+                    width="100%" alt="">
+                <a href="#">
+                    <h4>S.T.A.L.K.E.R. 2</h4>
+                </a>
+            </div>
+
+            <div class="gamebloc"><img src="../assets/Images/aw2.jpg" width="100%" alt="">
+                <a href="#">
+                    <h4>Alan Wake 2</h4>
+                </a>
+            </div>
+
+            <div class="gamebloc"><img src="../assets/Images/ezgif-4-20d8140857.jpg" width="100%" alt="">
+                <a href="./jeusilenthill.php">
+                    <h4>Silent Hill 2</h4>
+                </a>
+            </div>
+
+            <div class="gamebloc"><img src="../assets/Images/re7.jpg" width="100%" alt="">
+                <a href="#">
+                    <h4>Resident Evil 7</h4>
+                </a>
+            </div>
+
+        </div>
+    </main>
+    <?php include("../template/footer.php"); ?>
+
+    <script src="../assets/js/menuderoulant.js"></script>
+    <script src="../assets/js/tricat.js"></script>
+</body>
+
+</html>
