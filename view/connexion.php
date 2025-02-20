@@ -1,3 +1,8 @@
+<?php
+//  require("../controlleur/connexionController.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,18 +17,18 @@
 
 <body>
     <header>
-    <?php include("../template/navbar.php"); ?>
+    <?php require_once("../template/navbar.php"); ?> 
     </header>
 
     <main>
         <br>
         <div class="formcontain">
-            <form class="formconnexion" method="post" id="formconnexion">
+            <form class="formconnexion" method="post" id="formconnexion" action="../controlleur//connexionController.php">
                 <h2>Connexion</h2>
                 <hr>
                 <div class="forminput">
-                    <label for="mail">Se connecter avec l'adresse email :</label>
-                    <input type="email" id="mail" name="mail" placeholder="adresse email">
+                    <label for="pseudo">Se connecter avec le pseudo :</label>
+                    <input type="text" id="pseudo" name="pseudo" placeholder="pseudo">
                 </div>
                 <div class="forminput">
                     <label for="password">Entrez le mot de passe :</label>
@@ -32,9 +37,10 @@
                 </div>
                 <div class="formvalide">
                     <input type="submit" value="Connexion">
+                
                 </div>
             </form>
-            <form class="formregistration" method="post">
+            <div class="formregistration" >
                 <h2>Pas encore membre ?</h2>
                 <hr>
                 <div class="create">
@@ -46,14 +52,14 @@
                     </div>
                     <!-- <a href="./inscription.html"><input type="submit" value="Créer un compte"></a> -->
                 </div>
-            </form>
+</div>
         </div>
     </main>
 
-    <?php include("../template/footer.php"); ?>
+    <?php require_once("../template/footer.php"); ?>
 
     <script src="../assets/js/menuderoulant.js"></script>
-    <script src="../assets/js/regexconnexion.js"></script>
+    <!-- <script src="../assets/js/regexconnexion.js"></script> Ce script empêche la connexion et rend le bouton inutilisable -->
 </body>
 
 </html>

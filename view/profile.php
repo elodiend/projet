@@ -1,3 +1,10 @@
+<?php
+// require_once("../controlleur/initsession.php");
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,14 +19,21 @@
 
 <body>
     <header>
-    <?php include("../template/navbar.php"); ?>
+    <?php require_once("../template/navbar.php"); ?>
     </header>
     <main>
     <div class="categorycontain">
             <div class="title1">
                 <h3>Mon profil</h3>
             </div>
-            <input type="submit" class="deconnexion" value="Déconnexion">
+            <!-- <button type="submit" class="deconnexion"> -->
+                <div class="deconnexion">
+                    <a href="../controlleur/logout.php">
+                        <input type="submit" value="Déconnexion">
+                    <!-- Déconnexion -->
+                    </a>
+                </div>
+            <!-- </button> -->
 
         </div>
         <div class="profilecontain">
@@ -27,7 +41,7 @@
                 <div class="leftpart">
                     <div class="pseudo">
                         <img src="../assets/Images/ac.jpg" alt="" width="100%">
-                        <h2>pseudo en php</h2>
+                        <h2><?php echo "$pseudo" ?></h2>
                     </div>
 
                     <div class="infoprofile">
@@ -59,13 +73,13 @@
             </div>
         </div>
        
-        <div class="createbtn">
+        <div class="modifybtn">
             <a href="#"><h2>Modifier mon profil</h2></a>
         </div>
           <br>
     </main>
 
-    <?php include("../template/footer.php"); ?>
+    <?php require_once("../template/footer.php"); ?>
 
     <script src="../assets/js/menuderoulant.js"></script>
     <script src="../assets/js/regexinscription.js"></script>

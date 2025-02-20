@@ -12,7 +12,7 @@
 
 <body>
     <header>
-    <?php include("../template/navbar.php"); ?>
+    <?php require_once("../template/navbar.php"); ?>
     </header>
     <br>
     <main>
@@ -131,7 +131,7 @@
 
         </div>
     </main>
-    <?php include("../template/footer.php"); ?>
+    <?php require_once("../template/footer.php"); ?>
 
     <script src="../assets/js/menuderoulant.js"></script>
     <script src="../assets/js/favori.js"></script>

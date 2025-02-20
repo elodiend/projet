@@ -1,3 +1,9 @@
+<?php
+// require_once("../controlleur/initsession.php");
+require_once("../controlleur/connexionController.php");
+$pseudo=$_SESSION['pseudo'];
+?>
+
 <nav>
       <label class="toggle" for="toggle">☰</label>
       <input type="checkbox" id="toggle">
@@ -29,7 +35,7 @@
 
         <div class="search">
           <form class="research" action="">
-            <input class="search-input" type="search" id="'recherche" name="q" placeholder="Nom du jeu..." />
+            <input class="search-input" type="search" id="recherche" name="q" placeholder="Nom du jeu..." />
             <button class="researchbtn"><img src="../assets/Images/icons8-loupe-32.png" alt="" width="25px"></button>
           </form>
         </div>
@@ -39,8 +45,15 @@
         </div>
 
         <div class="login">
-          <img src="../assets/Images/icons8-male-user-32.png" alt="" width="25px" /><a href="./connexion.php">
-            Inscription/connexion</a>
+          <img src="../assets/Images/icons8-male-user-32.png" alt="" width="25px" />
+          <?php if ((session_status() === PHP_SESSION_ACTIVE) && $_SESSION['pseudo']) {
+            echo "<a href='../view/profile.php'>"."$pseudo". '</a>';
+          } else {
+            echo '<a href="./connexion.php">Inscription/Connexion</a>';
+          }
+           ?>
+          
+          <!-- <a href="./connexion.php">Inscription/connexion</a> -->
         </div>
       </div>
     </nav>

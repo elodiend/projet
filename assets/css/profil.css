@@ -48,19 +48,28 @@ main {
     display: flex;
     grid-column-start: 5;
     grid-column-end: 6;
+    width: 100%;
+    justify-content: right;
+    /* text-align: center; */
+    } 
+
+    .deconnexion input {
+        letter-spacing: 1px;
+        height: 8vh;
+        width: 100%;
+        font-weight: bold;
+        background-color: #936FCD;
+        font-size: 20px;
+        text-shadow: 2px 2px 2px #343434;
+        cursor: pointer;
+        box-shadow: 2px 2px 2px black;
+        border-radius: 15px;
+    }
+
+   .deconnexion a {
+    text-decoration: none;
     text-align: center;
-    font-weight: bold;
-    font-size: 20px;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 2px #343434;
-    justify-content: center;
-    height: 8vh;
-    background-color: #936FCD;
-    border-radius: 15px;
-    align-content: center;
-    box-shadow: 2px 2px 2px black;
-    cursor: pointer;
-   } 
+   }
 
 
 /**************** Bloc pseudo/infos ******************/
@@ -175,7 +184,7 @@ hr {
 
 /******* bouton modifier profil *****/
 
-.createbtn {
+.modifybtn {
     text-align: center;
     width: 35%;
     height: 60px;
@@ -186,13 +195,13 @@ hr {
     box-shadow: 2px 2px 2px black;
     /* margin-bottom: 2%; */
 }
-.createbtn h2{
+.modifybtn h2{
     /* margin : auto; */
     height: 100%;
     font-size: 20px;
     text-shadow: 3px 3px 3px #343434;
 } 
-.createbtn a {
+.modifybtn a {
     text-decoration: none;
     margin: auto;
     width: 100%;

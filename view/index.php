@@ -1,3 +1,9 @@
+<?php   
+require_once("../controlleur/initsession.php");
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -12,7 +18,7 @@
 
 <body>
   <header>
-  <?php include("../template/navbar.php"); ?>
+  <?php require_once('../template/navbar.php'); ?>
   </header>
 
   <br>
@@ -118,7 +124,7 @@
   </main>
   <br>
   <br>
-  <?php include("../template/footer.php"); ?>
+  <?php require_once("../template/footer.php"); ?>
 
 <script src="../assets/js/menuderoulant.js"></script>
 </body>
