@@ -26,17 +26,14 @@
             <div class="title1">
                 <h3>Mon profil</h3>
             </div>
-            <!-- <button type="submit" class="deconnexion"> -->
                 <div class="deconnexion">
                     <a href="../controlleur/logout.php">
                         <input type="submit" value="Déconnexion">
-                    <!-- Déconnexion -->
                     </a>
                 </div>
-            <!-- </button> -->
-
+            
         </div>
-        <div class="profilecontain">
+        <!-- <div class="profilecontain"> -->
             <div class="profile">
                 <div class="leftpart">
                     <div class="pseudo">
@@ -68,15 +65,17 @@
                         <li>lien</li>
                         <li>lien</li>
                         <li>lien</li>
+                        <li>lien</li>
+                        <li>lien</li>
+                        <li>lien</li>
                     </ul>
                 </div>
             </div>
-        </div>
        
         <div class="modifybtn">
             <a href="#"><h2>Modifier mon profil</h2></a>
         </div>
-          <br>
+        <br>
     </main>
 
     <?php require_once("../template/footer.php"); ?>

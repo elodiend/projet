@@ -101,7 +101,9 @@
             </div>
         </div>
 
-        <h3>Publier un commentaire</h3>
+        <!-- Seuls les utilisateurs connectés peuvent poster un avis -->
+        <?php if ($_SESSION['pseudo']) {
+         echo '<h3>Publier un commentaire</h3>
         <hr align="left" width="35%">
         <div class="containformcom">
             <div class="commentbox">
@@ -127,7 +129,7 @@
                     <textarea name="comment" id="comment" placeholder="Ecrire votre commentaire..." required></textarea>
                 </form>
                 <button type="submit">Publier</button>
-            </div>
+            </div>';} ?>
 
         </div>
     </main>

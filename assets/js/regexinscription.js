@@ -1,4 +1,5 @@
 const form = document.getElementById("forminscription");
+const btnsubmit = document.getElementById("ok");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();

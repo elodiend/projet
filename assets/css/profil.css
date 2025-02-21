@@ -4,12 +4,6 @@ main {
     margin-right: 10%;
     /* min-height: calc(100vh - 6vh - 12vh) */
   }
-  @media all and (max-width: 900px){
-    main {
-      margin-left: 5%;
-      margin-right: 5%;
-    }
-}
 
 /* Titre section et bouton déco */
 
@@ -74,14 +68,13 @@ main {
 
 /**************** Bloc pseudo/infos ******************/
 
-.profilecontain {
+/* .profilecontain {
     width: 100%;
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    /* align-content: center; */
     justify-content: space-around;
-} 
+}  */
 
 .profile {
     margin: auto;
@@ -186,7 +179,7 @@ hr {
 
 .modifybtn {
     text-align: center;
-    width: 35%;
+    width: 30%;
     height: 60px;
     margin: auto;
     background-color: #936FCD;
@@ -211,5 +204,35 @@ hr {
 
 }
 
+@media all and (max-width: 900px){
+    main {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+
+    .profile {
+        width: 100%;
+        height: auto;
+    }
+
+    .rightpart {
+        width: 100%;
+    }
+
+    .leftpart {
+        width: 100%;
+    
+}
+    .modifybtn {
+        width: 60%;
+    }
+}
+
+@media all and (max-width: 550px){   /***Uniquement question d'esthétique, ça rend mieux **/
+        .title1 {
+        grid-column-end: 3;
+    }
+
+}
 
 

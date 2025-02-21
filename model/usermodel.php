@@ -46,14 +46,17 @@ function getUserById($id) {
 }
 
 // Créer un nouvel utilisateur
-function createUser($nom, $email, $password) {
+function createUser($pseudo, $password, $email, $age, $gender, $level) {
     $pdo = getConnexion();
-    $sql = "INSERT INTO users (nom, email, password) VALUES (:nom, :email, :password)";
+    $sql = "INSERT INTO ktfu_users (id_users, pseudo, password, email, gamelevel, gender, plateform_used, fav_game_type, picture, age, id_role) VALUES (0, :pseudo, MD5(:password), :email, :gamelevel, :gender, 0, 0, 0,  :age, 2)";
     try {
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':nom', $nom, PDO::PARAM_STR);
-        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
         $stmt->bindParam(':password', $password, PDO::PARAM_STR);
+        $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+        $stmt->bindParam(':gamelevel', $level, PDO::PARAM_STR);
+        $stmt->bindParam(':gender', $gender, PDO::PARAM_STR);
+        $stmt->bindParam(':age', $age, PDO::PARAM_STR);
         return $stmt->execute();
     } catch(PDOException $e) {
         echo "Erreur lors de la création de l'utilisateur : " . $e->getMessage();
@@ -62,13 +65,13 @@ function createUser($nom, $email, $password) {
 }
 
 // Mettre à jour un utilisateur
-function updateUser($id, $nom, $email, $password) {
+function updateUser($id, $pseudo, $email, $password) {
     $pdo = getConnexion();
-    $sql = "UPDATE users SET nom = :nom, email = :email, password = :password WHERE id = :id";
+    $sql = "UPDATE users SET pseudo = :pseudo, email = :email, password = :password WHERE id = :id";
     try {
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-        $stmt->bindParam(':nom', $nom, PDO::PARAM_STR);
+        $stmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
         $stmt->bindParam(':email', $email, PDO::PARAM_STR);
         $stmt->bindParam(':password', $password, PDO::PARAM_STR);
         return $stmt->execute();

@@ -16,7 +16,7 @@
     </header>
     <main>
         <div class="containinscr">
-            <form class="inscription" method="post" id="forminscription">
+            <form class="inscription" method="post" id="forminscription" action="../controlleur/inscriptionController.php">
                 <div class="titleinscription">
                     <h2>Inscription</h2>
                     <hr>
@@ -27,13 +27,13 @@
                     <input type="text" id="pseudo" name="pseudo" required>
                     <label for="password">Mot de passe</label>
                     <input type="password" id="password" name="password" placeholder="*************" required>
-                    <label for="passwordconfirm">Confirmer le mot de passe</label>
+                    <!-- <label for="passwordconfirm">Confirmer le mot de passe</label>
                     <input type="password" id="passwordconfirm" name="passwordconfirm" placeholder="*************"
-                        required>
-                    <label for="mail">Adresse mail</label>
-                    <input type="email" id="mail" name="mail" placeholder="exemple@gmail.fr" required>
-                    <label for="birth">Date de naissance</label>
-                    <input type="text" id="birth" name="birth" placeholder="JJ/MM/AAAA" required>
+                        required> -->
+                    <label for="email">Adresse mail</label>
+                    <input type="email" id="email" name="email" placeholder="exemple@gmail.fr" required>
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" required>
                 </div>
                 <div class="radio">
                     <label for="man">
@@ -60,7 +60,7 @@
                         Expérimenté</label>
                 </div>
                 <div class="formvalide">
-                    <input type="submit" value="Valider">
+                    <input type="submit" value="Valider" name="ok" id="ok">
                 </div>
             </form>
         </div>
@@ -69,7 +69,7 @@
     <?php require_once("../template/footer.php"); ?>
 
     <script src="../assets/js/menuderoulant.js"></script>
-    <script src="../assets/js/regexinscription.js"></script>
+    <!-- <script src="../assets/js/regexinscription.js"></script>  Le script bloque l'input submit je ne sais pas pourquoi -->
 </body>
 
 </html>
