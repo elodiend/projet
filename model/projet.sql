@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 19, 2025 at 04:21 PM
+-- Generation Time: Feb 24, 2025 at 12:50 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -179,9 +179,8 @@ CREATE TABLE `ktfu_users` (
   `id_users` int NOT NULL,
   `pseudo` varchar(50) DEFAULT NULL,
   `password` varchar(50) DEFAULT NULL,
-  `mail` varchar(50) DEFAULT NULL,
+  `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `gamelevel` varchar(50) DEFAULT NULL,
-  `date_inscription` date DEFAULT NULL,
   `gender` varchar(50) DEFAULT NULL,
   `plateform_used` varchar(50) DEFAULT NULL,
   `fav_game_type` varchar(50) DEFAULT NULL,
@@ -194,9 +193,12 @@ CREATE TABLE `ktfu_users` (
 -- Dumping data for table `ktfu_users`
 --
 
-INSERT INTO `ktfu_users` (`id_users`, `pseudo`, `password`, `mail`, `gamelevel`, `date_inscription`, `gender`, `plateform_used`, `fav_game_type`, `picture`, `age`, `id_role`) VALUES
-(1, 'elodie', 'Sally2509', 'elokyo@hotmail.fr', 'intermédiaire', '2025-02-19', 'femme', 'PS5', 'RPG', NULL, 35, 1),
-(2, 'test', 'Bonjour', 'test@test.fr', 'intermédiaire', '2025-02-19', 'femme', 'PS5', 'RPG', NULL, 35, 2);
+INSERT INTO `ktfu_users` (`id_users`, `pseudo`, `password`, `email`, `gamelevel`, `gender`, `plateform_used`, `fav_game_type`, `picture`, `age`, `id_role`) VALUES
+(1, 'elodie', 'Sally2509', 'elokyo@hotmail.fr', 'intermédiaire', 'femme', 'PS5', 'RPG', NULL, 35, 1),
+(2, 'test', 'Bonjour', 'test@test.fr', 'intermédiaire', 'femme', 'PS5', 'RPG', NULL, 35, 2),
+(5, 'Elina', 'e10adc3949ba59abbe56e057f20f883e', 'elokyo-deux@yahoo.fr', 'expert', 'Femme', '0', '0', '0', 24, 2),
+(9, 'Sookina', 'b51e8dbebd4ba8a8f342190a4b9f08d7', 'tester1@gmail.fr', 'intermediaire', 'Femme', '0', '0', '0', 45, 2),
+(10, 'tommy', '4a7d1ed414474e4033ac29ccb8653d9b', 'tester2@yaho.fr', 'expert', 'Homme', '0', '0', '0', 15, 2);
 
 --
 -- Indexes for dumped tables
@@ -268,7 +270,7 @@ ALTER TABLE `ktfu_games`
 ALTER TABLE `ktfu_users`
   ADD PRIMARY KEY (`id_users`),
   ADD UNIQUE KEY `pseudo` (`pseudo`),
-  ADD UNIQUE KEY `mail` (`mail`),
+  ADD UNIQUE KEY `mail` (`email`),
   ADD KEY `id_role` (`id_role`);
 
 --
@@ -291,7 +293,7 @@ ALTER TABLE `kftu_price`
 -- AUTO_INCREMENT for table `kftu_role`
 --
 ALTER TABLE `kftu_role`
-  MODIFY `id_role` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_role` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `ktfu_games`
@@ -303,7 +305,7 @@ ALTER TABLE `ktfu_games`
 -- AUTO_INCREMENT for table `ktfu_users`
 --
 ALTER TABLE `ktfu_users`
-  MODIFY `id_users` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_users` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables

@@ -23,7 +23,7 @@
     <main>
         <br>
         <div class="formcontain">
-            <form class="formconnexion" method="post" id="formconnexion" action="../controlleur//connexionController.php">
+            <form class="formconnexion" method="post" id="formconnexion" action="../controlleur/connexionController.php">
                 <h2>Connexion</h2>
                 <hr>
                 <div class="forminput">

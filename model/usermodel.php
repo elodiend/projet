@@ -48,7 +48,7 @@ function getUserById($id) {
 // Créer un nouvel utilisateur
 function createUser($pseudo, $password, $email, $age, $gender, $level) {
     $pdo = getConnexion();
-    $sql = "INSERT INTO ktfu_users (id_users, pseudo, password, email, gamelevel, gender, plateform_used, fav_game_type, picture, age, id_role) VALUES (0, :pseudo, MD5(:password), :email, :gamelevel, :gender, 0, 0, 0,  :age, 2)";
+    $sql = "INSERT INTO ktfu_users (id_users, pseudo, password, email, gamelevel, gender, plateform_used, fav_game_type, picture, age, id_role) VALUES (0, :pseudo, :password, :email, :gamelevel, :gender, 0, 0, 0,  :age, 2)";
     try {
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);

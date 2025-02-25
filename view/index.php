@@ -1,7 +1,7 @@
 <?php   
 // require_once("../controlleur/initsession.php");
 // error_reporting(0); Pour que les erreurs ne s'affichent pas, voir ça à la fin
-
+session_start();
 ?>
 
 
