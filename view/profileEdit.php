@@ -1,3 +1,5 @@
+<!-- Page pas encore faite -->
+
 <?php
 require_once("../controlleur/initsession.php");
 require("../controlleur/profileControlleur.php");
@@ -22,21 +24,22 @@ require("../controlleur/profileControlleur.php");
     <main>
     <div class="categorycontain">
             <div class="title1">
-                <h3>Mon profil</h3>
+                <h3>Modifier mon profil</h3>
             </div>
-                <div class="deconnexion">
-                    <a href="../controlleur/logout.php">
-                        <input type="submit" value="Déconnexion">
-                    </a>
-                </div>
+
             
         </div>
         <!-- <div class="profilecontain"> -->
             <div class="profile">
-                <div class="leftpart">
+                <form class="leftpart" method="post" enctype="multipart/form-data">
                     <div class="pseudo">
-                        <img src="../assets/Images/ac.jpg" alt="" width="100%">
-                        <h2><?php echo htmlspecialchars($user['pseudo']) ?></h2>
+                    <h2><?php echo htmlspecialchars($user['pseudo']) ?></h2>
+                    
+                    <img src="../assets/Images/ac.jpg" alt="" width="100%">
+                    <label for="imgprofile">Image de profil :</label>
+                        <input type="file" name="picture" id="picture">
+                        
+                        
                     </div>
 
                     <div class="infoprofile">
@@ -69,7 +72,7 @@ require("../controlleur/profileControlleur.php");
             </div>
        
         <div class="modifybtn">
-            <a href="./profileEdit.php"><h2>Modifier mon profil</h2></a>
+            <a href="#"><h2>Modifier mon profil</h2></a>
         </div>
         <br>
     </main>

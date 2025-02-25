@@ -1,6 +1,7 @@
 <?php
-// require_once("../controlleur/initsession.php");
-require_once("../controlleur/connexionController.php");
+// session_start();
+require_once("../controlleur/initsession.php");
+// require_once("../controlleur/connexionController.php");
 $pseudo = htmlspecialchars($_SESSION['pseudo']);
 ?>
 
