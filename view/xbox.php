@@ -72,11 +72,6 @@
                     <h4>Elden Ring</h4>
                 </a>
             </div>
-            <div class="gamebloc"><img src="../assets/Images/ark 2.jpg" width="100%" alt="">
-                <a href="#">
-                    <h4>Ark II</h4>
-                </a>
-            </div>
             <div class="gamebloc"><img src="../assets/Images/halo infinite.jpg" width="100%" alt="">
                 <a href="#">
                     <h4>Halo Infinite</h4>

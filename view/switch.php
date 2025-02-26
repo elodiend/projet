@@ -42,7 +42,7 @@
             </div>
             <div class="gamebloc"><img src="../assets/Images/mo.jpg" width="100%" alt="">
                 <a href="#">
-                    <h4>Mario Odyssey</h4>
+                    <h4>Super Mario Odyssey</h4>
                 </a>
             </div>
             <div class="gamebloc"><img src="../assets/Images/disney.jpg" width="100%" alt="">
