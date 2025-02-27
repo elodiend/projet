@@ -1,9 +1,10 @@
 <?php
 $sessionStatus = session_status();
+session_start();
 
-if ($sessionStatus == PHP_SESSION_NONE) {
-    session_start();
-
+if (isset($_SESSION['pseudo'])){
+    $pseudo = $_SESSION['pseudo'];
+  
 }
 
 ?>

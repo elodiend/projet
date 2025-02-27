@@ -152,7 +152,8 @@ nav {
   display: flex;
   flex-wrap: wrap;
   width: 20%;
-  justify-content: center; 
+  justify-content: center;
+  gap: 4%; 
   align-items: center;
   font-size: 16px;
 }

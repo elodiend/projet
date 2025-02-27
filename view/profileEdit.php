@@ -12,7 +12,7 @@ require_once("../controlleur/initsession.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamePlay</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/profil.css">
+    <link rel="stylesheet" href="../assets/css/profiledit.css">
     <link href="https://fonts.cdnfonts.com/css/roboto-3" rel="stylesheet" />
 </head>
 

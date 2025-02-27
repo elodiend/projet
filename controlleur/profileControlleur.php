@@ -18,7 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['picture']))
         $imgname = htmlspecialchars($_FILES['picture']['name']);
         $extension = pathinfo($imgname, PATHINFO_EXTENSION); 
         $img = "../assets/Images/uploadprofil" . $imgname;
-        echo '<img src="../assets/Images/uploadprofil'.$user["picture"].'">';
+
+        // echo '<img src="../assets/Images/uploadprofil'.$user["picture"].'">';
         
         
                 

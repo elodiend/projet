@@ -27,9 +27,9 @@
                     <input type="text" id="pseudo" name="pseudo" required>
                     <label for="password">Mot de passe</label>
                     <input type="password" id="password" name="password" placeholder="*************" required>
-                    <!-- <label for="passwordconfirm">Confirmer le mot de passe</label>
+                    <label for="passwordconfirm">Confirmer le mot de passe</label>
                     <input type="password" id="passwordconfirm" name="passwordconfirm" placeholder="*************"
-                        required> -->
+                        required>
                     <label for="email">Adresse mail</label>
                     <input type="email" id="email" name="email" placeholder="exemple@gmail.fr" required>
                     <label for="age">Age</label>
@@ -69,7 +69,7 @@
     <?php require_once("../template/footer.php"); ?>
 
     <script src="../assets/js/menuderoulant.js"></script>
-    <!-- <script src="../assets/js/regexinscription.js"></script>  Le script bloque l'input submit je ne sais pas pourquoi -->
+    <script src="../assets/js/regexinscription.js"></script>  
 </body>
 
 </html>

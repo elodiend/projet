@@ -59,7 +59,7 @@
     <?php require_once("../template/footer.php"); ?>
 
     <script src="../assets/js/menuderoulant.js"></script>
-    <!-- <script src="../assets/js/regexconnexion.js"></script> Ce script empêche la connexion et rend le bouton inutilisable -->
+    <script src="../assets/js/regexconnexion.js"></script> 
 </body>
 
 </html>
