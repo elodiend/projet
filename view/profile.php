@@ -1,6 +1,6 @@
 <?php
 // require_once("../controlleur/initsession.php");
-require("../controlleur/profileControlleur.php");
+require_once("../controlleur/profileControlleur.php");
 ?>
 
 <!DOCTYPE html>

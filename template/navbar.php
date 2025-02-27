@@ -45,16 +45,17 @@ require("../controlleur/profileControlleur.php");
         </div>
 
         <div class="login">
-          <?php echo '<img src="../assets/Images/uploadprofil'.$user["picture"].'" width="35px" style=border-radius:50%>'; ?>
-          <!-- <img src="../assets/Images/icons8-male-user-32.png" alt="" width="25px" /> -->
+          <?php if ((session_status() === PHP_SESSION_ACTIVE) && isset($user['picture'])){
+            echo '<img src="../assets/Images/uploadprofil'.$user["picture"].'" width="35px" style=border-radius:50%>'; 
+            } else {
+          echo '<img src="../assets/Images/icons8-male-user-32.png" alt="" width="25px" />';
+            }?>
           <?php if ((session_status() === PHP_SESSION_ACTIVE) && isset($_SESSION['pseudo'])) {
             echo "<a href='../view/profile.php'>"."$pseudo". '</a>';
           } else {
             echo '<a href="./connexion.php">Inscription/Connexion</a>';
-          }
-           ?>
+          }  ?>
           
-          <!-- <a href="./connexion.php">Inscription/connexion</a> -->
         </div>
       </div>
     </nav>

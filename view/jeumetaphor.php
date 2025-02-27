@@ -106,7 +106,7 @@
 
 
                 <!-- Seuls les utilisateurs connectés peuvent poster un avis -->
-                <?php if ($_SESSION['pseudo']) {
+                <?php if (isset($_SESSION['pseudo'])) {
             echo '<h3>Publier un commentaire</h3>
         <hr align="left" width="35%">
         <div class="containformcom">

@@ -48,7 +48,7 @@ function getUserById($id) {
 // Créer un nouvel utilisateur
 function createUser($pseudo, $password, $email, $age, $gender, $level) {
     $pdo = getConnexion();
-    $sql = "INSERT INTO ktfu_users (id_users, pseudo, password, email, gamelevel, gender, plateform_used, fav_game_type, picture, age, id_role) VALUES (0, :pseudo, :password, :email, :gamelevel, :gender, NULL, NULL, :picture, :age, 2)";
+    $sql = "INSERT INTO ktfu_users (id_users, pseudo, password, email, gamelevel, gender, plateform_used, fav_game_type, age, id_role) VALUES (0, :pseudo, :password, :email, :gamelevel, :gender, NULL, NULL, :age, 2)";
     try {
         $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
@@ -57,7 +57,7 @@ function createUser($pseudo, $password, $email, $age, $gender, $level) {
         $stmt->bindParam(':gamelevel', $level, PDO::PARAM_STR);
         $stmt->bindParam(':gender', $gender, PDO::PARAM_STR);
         $stmt->bindParam(':age', $age, PDO::PARAM_STR);
-        $stmt->bindParam(':picture', $picture, PDO::PARAM_STR);
+        // $stmt->bindParam(':picture', $picture, PDO::PARAM_STR);
         return $stmt->execute();
     } catch(PDOException $e) {
         echo "Erreur lors de la création de l'utilisateur : " . $e->getMessage();
