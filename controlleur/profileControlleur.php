@@ -1,14 +1,28 @@
 <?php
 require_once("../controlleur/initsession.php");
-include("../model/usermodel.php");
+require_once("../model/usermodel.php");
 
-$pdo = getConnexion();
 $pseudo = $_SESSION['pseudo'];
+// function getPseudo($pseudo){
+//     $pdo = getConnexion();
 
-$sql = "SELECT * FROM ktfu_users WHERE pseudo = :pseudo";
-$stmt = $pdo->prepare($sql);
-$stmt->execute([':pseudo' => $pseudo]);
-$user = $stmt->fetch(PDO::FETCH_ASSOC); 
+//     $sql = "SELECT * FROM ktfu_users WHERE pseudo = :pseudo";
+//     $stmt = $pdo->prepare($sql);
+//     $stmt->execute([':pseudo' => $pseudo]);
+//     $user = $stmt->fetch(PDO::FETCH_ASSOC);
+//     return $user;
+// }
+
+$user = getPseudo($pseudo);
+
+// $pdo = getConnexion();
+// $pseudo = $_SESSION['pseudo'];
+
+// $sql = "SELECT * FROM ktfu_users WHERE pseudo = :pseudo";
+// $stmt = $pdo->prepare($sql);
+// $stmt->execute([':pseudo' => $pseudo]);
+// $user = $stmt->fetch(PDO::FETCH_ASSOC); 
+
 
 /****************** Edition du profil ************/
 

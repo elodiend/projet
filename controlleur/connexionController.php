@@ -1,17 +1,20 @@
 <?php
 session_start();
-require("../model/usermodel.php");
+require_once("../model/usermodel.php");
 
 
-$pdo = getConnexion();
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // $pdo = getConnexion();
     $pseudo = $_POST['pseudo'];
     $password = $_POST['password'];
+
+    $user = getPseudo($pseudo);
     
-    $sql = "SELECT * FROM ktfu_users WHERE pseudo = :pseudo";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([':pseudo' => $pseudo]);
-    $user = $stmt->fetch(PDO::FETCH_ASSOC);    
+    // $sql = "SELECT * FROM ktfu_users WHERE pseudo = :pseudo";
+    // $stmt = $pdo->prepare($sql);
+    // $stmt->execute([':pseudo' => $pseudo]);
+    // $user = $stmt->fetch(PDO::FETCH_ASSOC);    
     // var_dump($user);
     
         

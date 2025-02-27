@@ -1,6 +1,6 @@
 <?php
 require_once("../controlleur/initsession.php");
-// require("../controlleur/profileControlleur.php");
+require("../controlleur/profileControlleur.php");
 // $pseudo = htmlspecialchars($_SESSION['pseudo']);
 ?>
 

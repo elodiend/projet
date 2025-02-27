@@ -95,3 +95,13 @@ function deleteUser($id) {
         return false;
     }
 }
+
+function getPseudo($pseudo){
+    $pdo = getConnexion();
+
+    $sql = "SELECT * FROM ktfu_users WHERE pseudo = :pseudo";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([':pseudo' => $pseudo]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $user;
+}
