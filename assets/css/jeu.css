@@ -40,10 +40,11 @@ main {
   }
   .favno {
     content: url("./coeur\ vide.png");
-  }
+     }
+
   .favyes {
     content: url("./coeur\ plein.png");
-  }
+   }
 
   .gameimg{
     width: 40%;

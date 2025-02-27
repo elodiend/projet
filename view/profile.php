@@ -1,6 +1,6 @@
 <?php
-require_once("../controlleur/initsession.php");
-require("../controlleur/profileControlleur.php");
+// require_once("../controlleur/initsession.php");
+// require("../controlleur/profileControlleur.php");
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +35,8 @@ require("../controlleur/profileControlleur.php");
             <div class="profile">
                 <div class="leftpart">
                     <div class="pseudo">
-                        <img src="../assets/Images/ac.jpg" alt="" width="100%">
+
+                        <?php echo '<img src="../assets/Images/uploadprofil'.$user["picture"].'">'; ?>
                         <h2><?php echo htmlspecialchars($user['pseudo']) ?></h2>
                     </div>
 
@@ -77,7 +78,6 @@ require("../controlleur/profileControlleur.php");
     <?php require_once("../template/footer.php"); ?>
 
     <script src="../assets/js/menuderoulant.js"></script>
-    <script src="../assets/js/regexinscription.js"></script>
-</body>
+    </body>
 
 </html>

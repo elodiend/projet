@@ -2,7 +2,6 @@
 
 <?php
 require_once("../controlleur/initsession.php");
-require("../controlleur/profileControlleur.php");
 ?>
 
 <!DOCTYPE html>
@@ -31,56 +30,56 @@ require("../controlleur/profileControlleur.php");
         </div>
         <!-- <div class="profilecontain"> -->
             <div class="profile">
-                <form class="leftpart" method="post" enctype="multipart/form-data">
+                <form class="leftpart" method="post" enctype="multipart/form-data" action="../controlleur/profileControlleur.php">
                     <div class="pseudo">
-                    <h2><?php echo htmlspecialchars($user['pseudo']) ?></h2>
-                    
-                    <img src="../assets/Images/ac.jpg" alt="" width="100%">
-                    <label for="imgprofile">Image de profil :</label>
+                        <h2><?php echo htmlspecialchars($user['pseudo']) ?></h2>
+                        
+                        <?php echo '<img src="../assets/Images/uploadprofil'.$user["picture"].'">'; ?>
+
+                        <label for="imgprofile">Image de profil :</label>
                         <input type="file" name="picture" id="picture">
                         
                         
                     </div>
 
                     <div class="infoprofile">
-                    <h2>Mes infos</h2>
-                    <hr>
-                    <ul>
-                        <li><b>Age :</b> <?php echo htmlspecialchars($user['age']) ?></li>
-                        <li><b>Genre :</b> <?php echo htmlspecialchars($user['gender']) ?></li>
-                        <li><b>Mail :</b> <?php echo htmlspecialchars($user['email']) ?></li>
-                        <li><b>Niveau de jeu :</b> <?php echo htmlspecialchars($user['gamelevel']) ?></li>
-                        <li><b>Genres préférés :</b> <?php echo htmlspecialchars($user['fav_game_type']) ?></li>
-                        <li><b>Plateforme(s) :</b> <?php echo htmlspecialchars($user['plateform_used']) ?></li>
-                    </ul>
+                        <h2>Mes infos</h2>
+                        <hr>
+                        <ul>
+                            <li><b>Age :</b> <?php echo htmlspecialchars($user['age']) ?></li>
+                            <li><b>Genre :</b> <?php echo htmlspecialchars($user['gender']) ?></li>
+                            <li><b>Mail :</b> <?php echo htmlspecialchars($user['email']) ?></li>
+                            <li><b>Niveau de jeu :</b> <?php echo htmlspecialchars($user['gamelevel']) ?></li>
+                            <li><b>Genres préférés :</b> <?php echo htmlspecialchars($user['fav_game_type']) ?></li>
+                            <li><b>Plateforme(s) :</b> <?php echo htmlspecialchars($user['plateform_used']) ?></li>
+                        </ul>
                     </div>
-                </div>
-                                
-                
-                <div class="rightpart">
-                <h2>Jeux favoris</h2>
-                <hr>
-                    <ul>
-                        <li>lien</li>
-                        <li>lien</li>
-                        <li>lien</li>
-                        <li>lien</li>
-                        <li>lien</li>
-                        <li>lien</li>
-                    </ul>
-                </div>
+                          
+                    <div class="rightpart">
+                        <h2>Jeux favoris</h2>
+                        <hr>
+                         <ul>
+                            <li>lien</li>
+                            <li>lien</li>
+                            <li>lien</li>
+                            <li>lien</li>
+                            <li>lien</li>
+                            <li>lien</li>
+                            </ul>
+                    </div>
             </div>
-       
-        <div class="modifybtn">
-            <a href="#"><h2>Modifier mon profil</h2></a>
-        </div>
+            
+                    <div class="modifybtn">
+                        <button type="submit" class="title1"><h2>Valider</h2></button>
+                    </div>
+                </form>
+
         <br>
     </main>
 
     <?php require_once("../template/footer.php"); ?>
 
     <script src="../assets/js/menuderoulant.js"></script>
-    <script src="../assets/js/regexinscription.js"></script>
-</body>
+    </body>
 
 </html>

@@ -1,7 +1,6 @@
 <?php
-// session_start();
 require_once("../controlleur/initsession.php");
-// require_once("../controlleur/connexionController.php");
+require("../controlleur/profileControlleur.php");
 $pseudo = htmlspecialchars($_SESSION['pseudo']);
 ?>
 
@@ -46,7 +45,8 @@ $pseudo = htmlspecialchars($_SESSION['pseudo']);
         </div>
 
         <div class="login">
-          <img src="../assets/Images/icons8-male-user-32.png" alt="" width="25px" />
+          <?php echo '<img src="../assets/Images/uploadprofil'.$user["picture"].'" width="35px" style=border-radius:50%>'; ?>
+          <!-- <img src="../assets/Images/icons8-male-user-32.png" alt="" width="25px" /> -->
           <?php if ((session_status() === PHP_SESSION_ACTIVE) && $_SESSION['pseudo']) {
             echo "<a href='../view/profile.php'>"."$pseudo". '</a>';
           } else {
