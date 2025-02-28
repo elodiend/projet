@@ -1,6 +1,6 @@
 <?php
 require_once("../controlleur/initsession.php");
-require_once("../model/usermodel.php");
+include_once("../model/usermodel.php");
 
 $pseudo = $_SESSION['pseudo'];
 // function getPseudo($pseudo){
@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_FILES['picture']))
             if (strtolower($extension) === "jpeg" || strtolower($extension) === "png" || strtolower($extension) === "jpg") 
             {
                 if (move_uploaded_file($file['tmp_name'], $img)) {
+                    $pdo = getConnexion();
                     $sql = "UPDATE ktfu_users SET picture = :picture WHERE pseudo = :pseudo";
                     $stmt = $pdo->prepare($sql);
                     $stmt->execute([':picture' => $imgname, ':pseudo' => $pseudo]);

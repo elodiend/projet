@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 26, 2025 at 03:08 PM
+-- Generation Time: Feb 27, 2025 at 01:41 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -226,15 +226,15 @@ INSERT INTO `ktfu_games` (`id_games`, `game_name`, `description`, `classificatio
 
 CREATE TABLE `ktfu_users` (
   `id_users` int NOT NULL,
-  `pseudo` varchar(50) DEFAULT NULL,
-  `password` varchar(50) DEFAULT NULL,
-  `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `gamelevel` varchar(50) DEFAULT NULL,
-  `gender` varchar(50) DEFAULT NULL,
+  `pseudo` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `password` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `email` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `gamelevel` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `gender` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `plateform_used` varchar(50) DEFAULT NULL,
   `fav_game_type` varchar(50) DEFAULT NULL,
-  `picture` varchar(50) DEFAULT NULL,
-  `age` int DEFAULT NULL,
+  `picture` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'default.png',
+  `age` int NOT NULL,
   `id_role` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -243,8 +243,8 @@ CREATE TABLE `ktfu_users` (
 --
 
 INSERT INTO `ktfu_users` (`id_users`, `pseudo`, `password`, `email`, `gamelevel`, `gender`, `plateform_used`, `fav_game_type`, `picture`, `age`, `id_role`) VALUES
-(1, 'elodie', 'Sally2509', 'elokyo@hotmail.fr', 'intermédiaire', 'femme', 'PS5', 'RPG', NULL, 35, 1),
-(2, 'test', 'Bonjour', 'test@test.fr', 'intermédiaire', 'femme', 'PS5', 'RPG', NULL, 35, 2),
+(1, 'elodie', 'Sally2509', 'elokyo@hotmail.fr', 'intermédiaire', 'femme', 'PS5', 'RPG', 'default.png', 35, 1),
+(2, 'test', 'Bonjour', 'test@test.fr', 'intermédiaire', 'femme', 'PS5', 'RPG', 'er.jpg', 35, 2),
 (5, 'Elina', 'e10adc3949ba59abbe56e057f20f883e', 'elokyo-deux@yahoo.fr', 'expert', 'Femme', '0', '0', '0', 24, 2),
 (9, 'Sookina', 'b51e8dbebd4ba8a8f342190a4b9f08d7', 'tester1@gmail.fr', 'intermediaire', 'Femme', '0', '0', '0', 45, 2),
 (11, 'test2', 'dbe2b97562beeae526a3fc529c3b2d25', 'test2@yahoo.fr', 'occasionnel', 'Homme', '0', '0', '0', 45, 2),
@@ -355,7 +355,7 @@ ALTER TABLE `ktfu_games`
 -- AUTO_INCREMENT for table `ktfu_users`
 --
 ALTER TABLE `ktfu_users`
-  MODIFY `id_users` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_users` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Constraints for dumped tables

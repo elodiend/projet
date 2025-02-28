@@ -5,7 +5,7 @@ main {
     /* min-height: calc(100vh - 6vh - 12vh) */
   }
 
-/* Titre section et bouton déco */
+/* Titre section et bouton suppression (à faire) */
 
 .categorycontain {
     display: grid;
@@ -14,8 +14,8 @@ main {
     grid-template-rows: auto;
     width: 100%;
     height: 100%;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
     /* margin: auto; */
   }
   
@@ -67,13 +67,16 @@ main {
 
 /**************** Bloc pseudo/infos ******************/
 
-/* .profilecontain {
+.profilecontain {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-}  */
+    background-color: #4b4b4b;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 15px;
+    /* justify-content: space-around; */
+} 
 
 .profile {
     margin: auto;
@@ -81,15 +84,21 @@ main {
     display: flex;
     /* width: 50%; */
     width: 90%;
+    /* height: auto; */
     height: 70vh;
-     background-color: #4b4b4b;
-    border-radius: 15px;
     text-align: center;
-    box-shadow: 2px 2px 2px black;
     margin-bottom: 2%;
     /* align-content: center; */
 }
-
+.leftpart {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 50%;
+    }
 .pseudo {
     width: 100%;
     height: 30%;
@@ -106,20 +115,10 @@ main {
     padding: 2%;
 }
 
-.pseudo h2 {    
+.pseudo h2 {  
     width: 100%;
-    /* height: 7%; */
+    height: 15%;
     text-shadow: 3px 3px 3px #343434;}
-
-.leftpart {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-    width: 50%;
-    }
 
 .infoprofile {
     width: 100%;
@@ -133,6 +132,10 @@ main {
     height: 15%;
     text-shadow: 3px 3px 3px #343434;
     align-content: center;
+    /* margin: 0; */
+}
+
+.rightpart h2 {
     margin: 0;
 }
 
@@ -164,7 +167,7 @@ hr {
     justify-content: center;
     text-align: center;
     height: 100%;
-    width: 40%;
+    width: 50%;
 }
 
 .rightpart ul {
@@ -177,19 +180,38 @@ hr {
 
 /******* bouton modifier profil *****/
 
-.modifybtn {
+.formvalide {
+    width: 100%;
+    height: 15%;
+    align-content: center;
+}
+
+.formvalide input { 
+    background-color: #936FCD;
+    padding: 2%;
+    width: 20%;
+    height: 65px;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 15px;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px #343434;
+    cursor: pointer;
+    }
+
+/* .modifybtn {
     text-align: center;
-    width: 30%;
-    height: 60px;
+    width: 30%; */
+    /* height: 60px; */
+    /* height: 20%;
     margin: auto;
     background-color: #936FCD;
     border-radius: 15px;
     align-content: center;
     box-shadow: 2px 2px 2px black;
-    /* margin-bottom: 2%; */
+    margin-bottom: 2%;
 }
 .modifybtn h2{
-    /* margin : auto; */
     height: 100%;
     font-size: 20px;
     text-shadow: 3px 3px 3px #343434;
@@ -198,11 +220,10 @@ hr {
     text-decoration: none;
     margin: auto;
     width: 100%;
-    height: 100%;
+    height: 100%; */
     /* padding: 5% 29% 5% 29%;
     padding: 24px 102px 24px 102px; */
-
-}
+/* } */
 
 @media all and (max-width: 900px){
     main {
@@ -213,17 +234,53 @@ hr {
     .profile {
         width: 100%;
         height: auto;
+        margin-bottom: 2%;
     }
-
-    .rightpart {
-        width: 100%;
+    .profilecontain {
+        margin-bottom: 1%;
     }
 
     .leftpart {
         width: 100%;
-    
+        height: 70%;    
 }
-    .modifybtn {
+
+    .pseudo {
+        justify-content: center;
+        height: 40%;
+    }
+
+    .pseudo h2,
+    .infoprofile h2 {
+        margin: 0;
+        margin-top: 2%;
+    }
+
+    .infoprofile {
+        height: 60%;
+    }
+
+    .infoprofile ul,
+    .rightpart ul {
+        margin: 0;
+        padding: 1%;
+    }
+
+    .rightpart ul {
+        height: 70%;
+    }
+
+    .rightpart {
+        width: 100%;
+        height: 30%;
+    }
+    /* .rightpart ul {
+        height: 60%;
+    } */
+
+
+
+    .formvalide input {
         width: 60%;
     }
 }

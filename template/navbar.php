@@ -49,7 +49,7 @@ require("../controlleur/profileControlleur.php");
             echo '<img src="../assets/Images/uploadprofil'.$user["picture"].'" width="35px" style=border-radius:50%>'; 
             } else {
           echo '<img src="../assets/Images/icons8-male-user-32.png" alt="" width="25px" />';
-            }?>
+             }?>
           <?php if ((session_status() === PHP_SESSION_ACTIVE) && isset($_SESSION['pseudo'])) {
             echo "<a href='../view/profile.php'>"."$pseudo". '</a>';
           } else {

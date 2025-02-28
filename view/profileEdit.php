@@ -25,21 +25,19 @@ require_once("../controlleur/initsession.php");
             <div class="title1">
                 <h3>Modifier mon profil</h3>
             </div>
-
-            
-        </div>
-        <!-- <div class="profilecontain"> -->
-            <div class="profile">
-                <form class="leftpart" method="post" enctype="multipart/form-data" action="../controlleur/profileControlleur.php">
+ 
+    </div>
+        
+        <form class="profile" method="post" enctype="multipart/form-data" action="../controlleur/profileControlleur.php">
+            <div class="profilecontain">
+                <div class="leftpart">
                     <div class="pseudo">
                         <h2><?php echo htmlspecialchars($user['pseudo']) ?></h2>
                         
                         <?php echo '<img src="../assets/Images/uploadprofil'.$user["picture"].'">'; ?>
 
-                        <label for="imgprofile">Image de profil :</label>
+                        <!-- <label for="imgprofile">Image de profil :</label> -->
                         <input type="file" name="picture" id="picture">
-                        
-                        
                     </div>
 
                     <div class="infoprofile">
@@ -54,7 +52,7 @@ require_once("../controlleur/initsession.php");
                             <li><b>Plateforme(s) :</b> <?php echo htmlspecialchars($user['plateform_used']) ?></li>
                         </ul>
                     </div>
-                          
+                </div>      
                     <div class="rightpart">
                         <h2>Jeux favoris</h2>
                         <hr>
@@ -68,15 +66,12 @@ require_once("../controlleur/initsession.php");
                             </ul>
                     </div>
             </div>
-            
-                    <div class="modifybtn">
-                        <button type="submit" class="title1"><h2>Valider</h2></button>
+                    <div class="formvalide">
+                    <input type="submit" value="Valider">
                     </div>
-                </form>
-
-        <br>
+                
+        </form>
     </main>
-
     <?php require_once("../template/footer.php"); ?>
 
     <script src="../assets/js/menuderoulant.js"></script>
